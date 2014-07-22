@@ -8,8 +8,6 @@ Just clone this repo ``git clone git@github.com:luvitrocks/luvit-module-boilerpl
 
 It contains both ``package.json`` and ``package.lua`` dummy files where you should put module's metadata. We advice you to keep both but consider ``package.json`` file as the main source and [npm](http://npmjs.org) as the main dependency manager while ``package.lua`` is for old versions of luvit.io and those guys that prefer managing modules with some local tools.
 
-Join the [discussion](https://github.com/virgo-agent-toolkit/luvit-pkg/issues/2).
-
 ## What's NPM?
 
 If you didn't work with [Node.js](http://nodejs.org) you may not heard about [npm](http://npmjs.org). Wiki describes it as:
@@ -21,8 +19,6 @@ Since version ``0.8.2`` you're able to install Luvit applications as well! Just 
 ## License
 
 MIT Licensed
-
-Copyright (c) 2014
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
