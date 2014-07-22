@@ -16,6 +16,8 @@ If you didn't work with [Node.js](http://nodejs.org) you may not heard about [np
 
 Since version ``0.8.2`` you're able to install Luvit applications as well! Just install [Node.js](http://nodejs.org) and [npm](http://npmjs.org) will be bundled automatically.
 
+Inside the repo run ``npm init`` or just install dependencies that you need like ``npm install luvit-utopia``. Search for available modules at http://npmjs.org or special resources like [Nipster](http://eirikb.github.io/nipster/). Full documentation is available [here](https://www.npmjs.org/doc/).
+
 ## License
 
 MIT Licensed
