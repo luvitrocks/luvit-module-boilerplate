@@ -1,28 +1,53 @@
-# luvit-module-boilerplate
+# luvit-timeout
 
-The aim of this repo is to provide an easy starting point for [luvit.io](http://luvit.io) developers to create and maintain modules.
+Times out the request in ``ms`` (defaulting to ``5000``) middleware for [luvit.io](http://luvit.io) and [Utopia](https://github.com/luvitrocks/luvit-utopia).
 
-## How to
+## Install
 
-Just clone this repo ``git clone git@github.com:luvitrocks/luvit-module-boilerplate.git``, rename it and put the code right in! 
+```bash
+npm install luvit-timeout
+```
 
-It contains both ``package.json`` and ``package.lua`` dummy files where you should put module's metadata. We advice you to keep both but consider ``package.json`` file as the main source and [npm](http://npmjs.org) as the main dependency manager while ``package.lua`` is for old versions of luvit.io and those guys that prefer managing modules with some local tools.
+If you're not familiar with [npm](https://www.npmjs.org/) check this out:
+- https://github.com/voronianski/luvit-npm-example#how-to
+- https://github.com/luvitrocks/luvit-utopia#install
 
-## What's NPM?
+## API
 
-If you didn't work with [Node.js](http://nodejs.org) you may not heard about [npm](http://npmjs.org). Wiki describes it as:
+### ``timeout(time, options)``
 
-> npm is the official package manager for Node.js. As of Node.js version 0.6.3, npm is bundled and installed automatically with the environment. npm runs through the command line and manages dependencies for an application. It also allows users to install Node.js applications that are available on the npm registry.
+Returns middleware that times out in ``time`` milliseconds. On timeout request will emit ``'timeout'``.
 
-Since version ``0.8.2`` you're able to install Luvit applications as well! Just install [Node.js](http://nodejs.org) and [npm](http://npmjs.org) will be bundled automatically.
+### Options
 
-Inside the repo run ``npm init`` or just install dependencies that you need like ``npm install luvit-utopia``. You can search for available modules at http://npmjs.org or special resources like [Nipster](http://eirikb.github.io/nipster/). 
+- ``respond`` - If ``true``, the timeout error is passed to next() so that you may customize the response behavior, defaults to ``true``
 
-Full documentation is available [here](https://www.npmjs.org/doc/).
+##### ``req.clearTimeout()``
+
+Clears the timeout on the request.
+
+##### ``req.timedout``
+
+It's ``true`` if timeout fired and ``false`` otherwise.
+
+## Example
+
+```lua
+local utopia = require('luvit-utopia')
+local timeout = require('luvit-timeout')
+
+local app = utopia:new()
+
+app:use(timeout(2000))
+
+app:listen(8080)
+```
 
 ## License
 
 MIT Licensed
+
+Copyright (c) 2014 Dmitri Voronianski [dmitri.voronianski@gmail.com](mailto:dmitri.voronianski@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
