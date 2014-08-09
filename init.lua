@@ -1,0 +1,2 @@
+-- return your module entry point here
+-- e.g. return require('./lib/yourModule')
