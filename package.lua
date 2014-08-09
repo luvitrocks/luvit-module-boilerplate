@@ -1,15 +1,15 @@
 -- for older versions of luvit and alternative package managers
 return {
-	name = "luvit-timeout",
-	version = "0.1.0",
-	description = "Luvit timeout middleware",
+	name = "luvit-module",
+	version = "0.0.0",
+	description = "",
 	repository = {
-		url = "http://github.com/luvitrocks/luvit-timeout.git",
+		url = "",
 	},
 	author = {
-		name = "Dmitri Voronianski",
-		email = "dmitri.voronianski@gmail.com"
+		name = "",
+		email = ""
 	},
-	licenses = {"MIT"},
+	licenses = {""},
 	main = 'init.lua'
 }

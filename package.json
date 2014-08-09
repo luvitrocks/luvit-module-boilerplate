@@ -1,20 +1,20 @@
 {
-  "name": "luvit-timeout",
-  "version": "0.1.0",
-  "description": "Luvit timeout middleware",
+  "name": "luvit-module",
+  "version": "0.0.0",
+  "description": "",
   "main": "init.lua",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": ""
   },
   "repository": {
-    "type": "git",
-    "url": "git://github.com:luvitrocks/luvit-timeout.git"
+    "type": "",
+    "url": ""
   },
-  "keywords": ["luvit", "utopia", "middleware", "timeout", "headers", "respond"],
+  "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luvitrocks/luvit-timeout"
+    "url": ""
   },
-  "homepage": "https://github.com/luvitrocks/luvit-timeout/issues"
+  "homepage": ""
 }
